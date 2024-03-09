@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e2e1de;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background {
+  background-color: #00a884;
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chatContainer {
+  width: 95%;
+  max-width: 1700px;
+  height: 95%;
+  background-color: #fff;
+  position: absolute;
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chatContacts {
+  width: 30%;
+  height: 100%;
+  border-right: 1px solid #e6e6e6;
+}
+
+.chatOptions {
+  width: 100%;
+  height: 80px;
+  background-color: #f0f2f5;
+}
+
+.chatItem {
+  box-sizing: border-box;
+  padding: 10px;
+  border-top: 1px solid #f0f2f5;
+  border-bottom: 1px solid #f0f2f5;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.imageProfile {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.titleChatContainer {
   display: flex;
   flex-direction: column;
+  margin-left: 15px;
+}
+
+.titleMessage {
+  font-size: 18px;
+}
+
+.lastMessage {
+  color: #808080;
+}
+
+/* Mensagens ------------- */
+
+.chatMessages {
+  flex: 1;
+  background-image: url(./assets/zap.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chatMessagesArea {
+  flex: 1;
+}
+
+.chatInputArea {
+  width: 100%;
+  height: 70px;
+  background-color: #f0f2f5;
+  box-sizing: border-box;
+  padding: 0 10px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.chatInput {
+  width: 90%;
+  background-color: #fff;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 4px;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sendMessageIcon {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
 }

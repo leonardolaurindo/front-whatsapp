@@ -1,23 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import Image from './assets/group.jpg';
+import SendMessageIcon from './assets/send.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className='background'></div>
+      <div className='chatContainer'>
+        {/* ------------ Contatos */}
+        <div className='chatContacts'>
+          <div className='chatOptions'></div>
+          <div className='chatItem'>
+            <img src={Image} className='imageProfile' alt='Imagem do Perfil' />
+            <div className='titleChatContainer'>
+              <span className='titleMessage'>Nome do Grupo</span>
+              <span className='lastMessage'>Ultima mensagem</span>
+            </div>
+          </div>
+        </div>
+        {/* -------------- Mensagens */}
+        <div className='chatMessages'>
+          <div className='chatOptions'>
+            <div className='chatItem'>
+              <img src={Image} className='imageProfile' alt='Imagem do Perfil' />
+              <div className='titleChatContainer'>
+                <span className='titleMessage'>Nome do Grupo</span>
+                <span className='lastMessage'>Xica, Maria, Zulena</span>
+              </div>
+            </div>
+          </div>
+
+          <div className='chatMessagesArea'>
+
+          </div>
+          <div className='chatInputArea'>
+            <input className='chatInput' placeholder='Mensagem...' />
+            <img className='sendMessageIcon' src={SendMessageIcon} alt='Send Message' />
+          </div>
+        </div>
+
+      </div>
+
     </div>
   );
 }
